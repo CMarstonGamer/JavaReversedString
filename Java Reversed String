@@ -1,0 +1,17 @@
+package question;
+
+public class ReverseString {
+	
+public static void main(String[] args) {
+		
+String str = "Hello World";
+char[] stringReversed = str.toCharArray();
+char[] copyString = str.toCharArray();
+for (int i = 0, j=str.length()-1; i<j; i++ , j--) {
+	stringReversed[i] = copyString[j];
+	stringReversed[j] = copyString[i];
+}
+String reversed = String.copyValueOf(stringReversed);
+System.out.println("The reversed string is: "+ reversed);
+}
+}
